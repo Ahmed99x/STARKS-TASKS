@@ -1,7 +1,11 @@
 #include <stdio.h>
+#include <conio.h>
 #include <stdlib.h>
 
 #include "Stack.h"
+
+
+#ifdef ARRAY_STACK
 
 /*********************************************************************************/
 /****************************** Array-based implementation************************/
@@ -91,3 +95,5 @@ void TraverseStack(Stack *ps, void (*pvisit)(StackEntry)){
 	for(int i=ps->top; i>0; i--)
 		(*pvisit)(ps->entry[i-1]);
 }                                             /* void TraverseStack */
+
+#endif
