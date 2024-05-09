@@ -1,10 +1,10 @@
 
-#define ARRAY_QUEUE
+#define LINKED_QUEUE
 
-#ifdef ARRAY_STACK
+#ifdef LINKED_STACK
 
 /*********************************************************************************/
-/****************************** Array-based implementation************************/
+/****************************** Linked implementation************************/
 /*********************************************************************************/
 
 typedef struct queue{
@@ -13,6 +13,13 @@ typedef struct queue{
 	int size;
 	QueueEntry entry[MAXQUEUE];
 } Stack;
+
+typedef struct queue{
+	QueueNode *front;
+	QueueNode *rear;
+	int	size;
+}Queue;
+
 
 #endif
 
